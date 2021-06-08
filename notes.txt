@@ -3,14 +3,14 @@ ai top down shooter
 
 you take over a center by touching it
 
-
+MACRO:
 a small neural network to govern large scale strategy like when to go aggressive/defensive, based on questions like enemy numbers and distributions
 so the system creates a matrix that has number of players near our bases in one dimension, ratio of our bases to their bases, ratio of our teammates vs their team mates
 the value at each matrix cell indicating defense vs offense. The idea being that optimal strategy may matter on the situation but also on the history
 macro might also have to decide which cells to go for, closest, farthest, pick a corner, etc.
+Q-state may be useful for the macroscale decisions. For example, learning that when the enemy just lost a lot of troops it's time to attack would be something that a Q-state algorithm could learn (when a lot of troops are lost, it means that you have a short window to attack while they are respawning). 
 
-
-
+MICRO:
 So the bulk of the microscale decisions will be hardcoded (aim at enemies before shooting, dodge bullets, travel to waypoint). What will have a slider on it will be when to do these things:
 like at what range to fire(longer range has higher chance of missing, closer range has higher chance of dying first),
 how far in advance to juke (long range gets it out of the way and lets you plan ahead, short range means less un necessary juking),
